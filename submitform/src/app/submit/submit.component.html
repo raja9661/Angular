@@ -1,0 +1,55 @@
+<div class="container">
+    <form class="submit" (ngSubmit)="onsubmit(myform)" #myform="ngForm">
+        <div class="input-box1">
+            <label for="fname">First Name</label>
+            <input type="text" 
+              id="fname" 
+              name="firstname" 
+              ngModel
+              required
+              #fname="ngModel">
+              <div>
+                <p *ngIf="fname.invalid && fname.touched">First name is requid</p>
+              </div>
+        </div>
+        <div class="input-box2">
+            <label for="lastname">Last Name</label>
+            <input type="text" 
+              id="lastname"
+              name="lastname" 
+              ngModel
+              required
+              #lastname="ngModel">
+              <div>
+                <p *ngIf="lastname.invalid && lastname.touched">Last name is requid</p>
+              </div>
+        </div>
+        <div class="input-box3">
+            <label for="Email">Email</label>
+            <input type="email" 
+              class="Email" 
+              name="email" 
+              ngModel
+              required email
+              #email="ngModel">
+              <div>
+                <p *ngIf="email.invalid && email.touched">email is requid</p>
+              </div>
+        </div>
+        <div class="password">
+            <label for="password">Password</label>
+            <input type="password" 
+              class="password" 
+              name="password" 
+              ngModel
+              required
+              #password="ngModel">
+              <div>
+                <small *ngIf="password.invalid && password.touched">password is requid</small>
+              </div>
+        </div>
+        <div class="submit-button">
+            <button type="submit" id="btn" [disabled]="!myform.valid">submit</button>
+        </div>
+    </form>
+</div>

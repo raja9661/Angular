@@ -1,0 +1,19 @@
+<div class="container">
+    <form class="Rform" (ngSubmit)="onsubmit(myform)" #myform="ngForm">
+        <div class="input-box">
+            <label for="name">Name</label>
+            <input type="text"
+             name="name" 
+             id="name"
+             ngModel
+             required
+             #n="ngModel">
+             <div>
+                <small *ngIf="n.invalid && n.touched">name is requid</small>
+             </div>
+        </div>
+        <div class="submit-button">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </form>
+</div>

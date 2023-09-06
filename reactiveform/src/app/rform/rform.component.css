@@ -1,0 +1,20 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: 400px;
+    width: 31px;
+    padding: 80px;
+    align-items: center;
+}
+.btn{
+    width: 120px;
+    background-color: green;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+p{
+    color: red;
+    text-align: start;
+}

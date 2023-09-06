@@ -1,0 +1,47 @@
+<div class="container">
+    <form class="nform" [formGroup]="newform" (ngSubmit)="onclick()">
+        <div formGroupName="requidField">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" placeholder="first name" formControlName="firstname">
+        <div>
+         <p *ngIf="!newform.get('requidField.firstname').valid && newform.get('requidField.firstname').touched">This field is requid</p>
+        </div>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" placeholder="last name" formControlName="lastname">
+        <div>
+        <p *ngIf="!newform.get('requidField.lastname').valid && newform.get('requidField.lastname').touched">This field is requid</p>
+        </div>
+        <label for="email">Email</label>
+        <input type="email"  id="email" placeholder="Enter your email Address" formControlName="email" >
+        <div>
+        <p *ngIf="!newform.get('requidField.email').valid && newform.get('requidField.email').touched">please enter valid email</p>
+        </div>
+        </div>
+        <label for="gender">Gender:</label>
+
+        <input type="radio" id="male" value="male" formControlName="gender">
+        <label for="male">male</label>
+
+        <input type="radio" id="female" value="female" formControlName="gender">
+        <label for="female">female</label>
+
+        <label for="country">country</label>
+        <select id="country" formControlName="country">
+        <option value="india">India</option>
+        <option value="America">America</option>
+        <option value="japan">Japan</option>
+        <option value="england">England</option>
+        </select>
+
+        <label for="hobby">Hobbies:</label>
+        <div id="hobby">
+            <label><input type="checkbox" formControlName="hobby">Sports</label>
+            <label><input type="checkbox" formControlName="hobby">Music</label>
+            <label><input type="checkbox" formControlName="hobby">Movies</label>
+            <label><input type="checkbox" formControlName="hobby">Dance</label>
+        </div>
+        <div class="button">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </form>
+</div>
