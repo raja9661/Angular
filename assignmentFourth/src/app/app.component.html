@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Simple Intrest Calculator</h1>
+  <div class="input-field1">
+    <label for="box1">Principal Amount</label>
+    <input type="number"  id="box1" [(ngModel)]="input1">
+  </div>
+  <div class="input-field2">
+    <label for="box2">Rate of Interest</label>
+    <input type="number" id="box2" [(ngModel)]="input2">
+  </div>
+  <div class="input-field3">
+    <label for="box3">Time in Month</label>
+    <input type="number" id="box3" [(ngModel)]="input3">
+  </div>
+  <div class="submit-button">
+    <button type="submit" id="btn" (click)="SIcalculator()">Calculate SI</button>
+  </div>
+  <div class="input-field4">
+    <label for="box4">Simple Interest</label>
+    <input type="number" id="box4" [(ngModel)]="input4">
+  </div>
+  <div>
+    <p>Amount:-{{amount|currency:'INR'}}</p>
+  </div>
+</div>

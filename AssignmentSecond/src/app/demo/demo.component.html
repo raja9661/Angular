@@ -1,0 +1,14 @@
+<div class="demo container">
+    <ul class="demo container-list">
+        <li>John-12</li>
+        <li>rohan-14</li>
+        <li>mohan-16</li>
+        <li *ngFor="let ppl of people">{{ppl}}</li>
+    </ul>
+
+    <div class="demo container-logic">
+        <input type="text" class="demo container-search1" placeholder="Name" (input)="inputEvent1($event)">
+        <input type="number" class="demo container-search-2" placeholder="Age" (input)="inputEvent2($event)">
+        <button class="demo container-button" (click)="addItem()">Add</button>
+    </div>
+</div>

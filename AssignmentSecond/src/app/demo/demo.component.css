@@ -1,0 +1,30 @@
+.container{
+    margin-top: 40px;
+}
+li
+{
+    list-style: none;
+    border: 2px solid black;
+    width: 300px;
+    text-align: center;
+    margin: 15px;
+}
+.container-logic{
+    margin-left: 60px;
+}
+.container-search1{
+    background-color: aliceblue;
+    height: 30px;
+}
+.container-search-2{
+    background-color: aliceblue;
+    height: 30px;
+    margin-left: 15px;
+}
+.container-button{
+    height: 36px;
+    color:black;
+    background-color:green;
+    margin-left: 15px;
+    width: 60px;
+}
